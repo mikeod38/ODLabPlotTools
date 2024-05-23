@@ -53,13 +53,12 @@ theme_black = function(base_size = 12, base_family = "") {
       plot.background = element_rect(color = "black", fill= "black", size =5),
       plot.title = element_text(size = base_size*1.2, color = "white")
       #plot.spacing = unit(rep(1, 4), "lines")
-
     )
 
   # Return to original defaults after theme is applied
-  on.exit({
-    update_geom_defaults("point", list(colour = "black"))
-    update_geom_defaults("line", list(colour = "black"))
-    update_geom_defaults("errorbar", list(colour = "black"))
-  })
+  # on.exit({
+  #   update_geom_defaults("point", list(colour = "black"))
+  #   update_geom_defaults("line", list(colour = "black"))
+  #   update_geom_defaults("errorbar", list(colour = "black"))
+  # })
 }
