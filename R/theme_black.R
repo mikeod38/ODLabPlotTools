@@ -5,12 +5,6 @@
 
 theme_black = function(base_size = 12, base_family = "") {
 
-  # Store original geom defaults
-  # Store original geom defaults
-  original_point_defaults <- ggplot2::ggplot_global$geom_defaults$point
-  original_line_defaults <- ggplot2::ggplot_global$geom_defaults$line
-  original_errorbar_defaults <- ggplot2::ggplot_global$geom_defaults$errorbar
-
   # Update geom defaults to white
   update_geom_defaults("point", list(colour = "white"))
   update_geom_defaults("line", list(colour = "white"))
@@ -64,8 +58,8 @@ theme_black = function(base_size = 12, base_family = "") {
 
   # Return to original defaults after theme is applied
   on.exit({
-    update_geom_defaults("point", original_point_defaults)
-    update_geom_defaults("line", original_line_defaults)
-    update_geom_defaults("errorbar", original_errorbar_defaults)
+    update_geom_defaults("point", list(colour = "black"))
+    update_geom_defaults("line", list(colour = "black"))
+    update_geom_defaults("errorbar", list(colour = "black"))
   })
 }
