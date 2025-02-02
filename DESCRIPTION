@@ -9,7 +9,8 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: 
+Imports:
+    tidyverse,
     dplyr (>= 1.1.2),
     readr (>= 2.1.4),
     forcats (>= 1.0.0),
